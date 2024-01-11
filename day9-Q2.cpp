@@ -113,18 +113,19 @@ int main()
         int n;
     cin >> n;
 
-    vector<int> arr(n);
+    vector<int> arr;
 
     for (int i = 0; i < n; i++)
         cin >> arr[i];
 
    int minDiff= INT_MAX;
     int t2=0;
+     if(n==1) cout<<"0";
     for (int i = 0; i < n - 1; i++)
     {
         if (arr[i] > arr[i + 1])
         {
-            cout << 0 << endl;
+            cout<< "0" <<endl;
             t2=1;
         }
         else 
@@ -132,12 +133,11 @@ int main()
             minDiff = min(minDiff, (arr[i + 1] - arr[i]));
         }
     }
-    if(t2==0 && n!=1)
+    // if(n!=1 && t2==0)
     cout << minDiff / 2 + 1 << endl;
-    if(n==1) cout<<0;
+    //if(t2==1) cout<<"0"<<endl;
+
     }
-
-
 
     return 0;
 }
