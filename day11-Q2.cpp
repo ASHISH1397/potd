@@ -7,9 +7,7 @@ void test_cases() {
 	
 }
 
-int main() {
-	ios::sync_with_stdio(false);
-	cin.tie(0);
+int main(){
 
 	int T = 1;
 	cin >> T;
